@@ -141,7 +141,7 @@ extension PrimaryViewController: DrawerViewControllerDelegate {
             if containerViewTopAnchor.constant <= expandedTopConstraint - constraintPadding {
                 drawerViewController.expansionState = .fullHeight
                 animateTopConstraint(constant: fullHeightTopConstraint, withVelocity: velocity)
-            } else if containerViewTopAnchor.constant < compressedTopConstrant - constraintPadding {
+            } else if containerViewTopAnchor.constant <= compressedTopConstrant - constraintPadding {
                 drawerViewController.expansionState = .compressed
                 animateTopConstraint(constant: compressedTopConstrant, withVelocity: velocity)
             } else {
